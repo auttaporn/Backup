@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2D0B67A-6E71-478E-B0CE-88F54CAD2F61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DeliverySystem.My.MyApplication</StartupObject>
+    <RootNamespace>DeliverySystem</RootNamespace>
+    <AssemblyName>DeliverySystem</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>ObjetdockSZ.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DeliverySystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DeliverySystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspper.Barcode.ASPNET, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c663117379bae55, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\suchawadee.a\Desktop\Aspper.NET.Barcode.SDK.Eva\Dll\Aspper.Barcode.ASPNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.XlsIO.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Delivery_Invoice\CancelDeliveryNote.Designer.vb">
+      <DependentUpon>CancelDeliveryNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\CancelDeliveryNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmCancelDeli.Designer.vb">
+      <DependentUpon>FrmCancelDeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmCancelDeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmPrintDeliNote.Designer.vb">
+      <DependentUpon>FrmPrintDeliNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmPrintDeliNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrnGenInvoice.Designer.vb">
+      <DependentUpon>FrnGenInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrnGenInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMPrice.Designer.vb">
+      <DependentUpon>frmMPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMProduct.Designer.vb">
+      <DependentUpon>frmMProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMStandardPack.Designer.vb">
+      <DependentUpon>frmMStandardPack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMStandardPack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pallet label\frmEmpty.Designer.vb">
+      <DependentUpon>frmEmpty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmEmpty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmPrintPallet.Designer.vb">
+      <DependentUpon>frmPrintPallet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmPrintPallet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\Configuration.vb" />
+    <Compile Include="Utility\main.vb" />
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Delivery_Invoice\CancelDeliveryNote.resx">
+      <DependentUpon>CancelDeliveryNote.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmCancelDeli.resx">
+      <DependentUpon>FrmCancelDeli.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmPrintDeliNote.resx">
+      <DependentUpon>FrmPrintDeliNote.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrnGenInvoice.resx">
+      <DependentUpon>FrnGenInvoice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMPrice.resx">
+      <DependentUpon>frmMPrice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMProduct.resx">
+      <DependentUpon>frmMProduct.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMStandardPack.resx">
+      <DependentUpon>frmMStandardPack.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmEmpty.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmPrintPallet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintPallet.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ObjetdockSZ.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\" />
+    <Folder Include="RPT\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

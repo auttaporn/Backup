@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataPall" targetNamespace="http://tempuri.org/DataSet3.xsd" xmlns:mstns="http://tempuri.org/DataSet3.xsd" xmlns="http://tempuri.org/DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.DeliverySystem.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.OleDb">
+          </Connection>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataPall" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataPall" msprop:Generator_DataSetName="DataPall">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LABEL" msprop:Generator_UserTableName="LABEL" msprop:Generator_RowDeletedName="LABELRowDeleted" msprop:Generator_TableClassName="LABELDataTable" msprop:Generator_RowChangedName="LABELRowChanged" msprop:Generator_RowClassName="LABELRow" msprop:Generator_RowChangingName="LABELRowChanging" msprop:Generator_RowEvArgName="LABELRowChangeEvent" msprop:Generator_RowEvHandlerName="LABELRowChangeEventHandler" msprop:Generator_TablePropName="LABEL" msprop:Generator_TableVarName="tableLABEL" msprop:Generator_RowDeletingName="LABELRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PPREFX" msprop:Generator_UserColumnName="PPREFX" msprop:Generator_ColumnPropNameInRow="PPREFX" msprop:Generator_ColumnVarNameInTable="columnPPREFX" msprop:Generator_ColumnPropNameInTable="PPREFXColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PSEQNO" msprop:Generator_UserColumnName="PSEQNO" msprop:Generator_ColumnPropNameInRow="PSEQNO" msprop:Generator_ColumnVarNameInTable="columnPSEQNO" msprop:Generator_ColumnPropNameInTable="PSEQNOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PDELNO" msprop:Generator_UserColumnName="PDELNO" msprop:Generator_ColumnPropNameInRow="PDELNO" msprop:Generator_ColumnVarNameInTable="columnPDELNO" msprop:Generator_ColumnPropNameInTable="PDELNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCUST" msprop:Generator_UserColumnName="PCUST" msprop:Generator_ColumnPropNameInRow="PCUST" msprop:Generator_ColumnVarNameInTable="columnPCUST" msprop:Generator_ColumnPropNameInTable="PCUSTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PMAKER" msprop:Generator_UserColumnName="PMAKER" msprop:Generator_ColumnPropNameInRow="PMAKER" msprop:Generator_ColumnVarNameInTable="columnPMAKER" msprop:Generator_ColumnPropNameInTable="PMAKERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PPART" msprop:Generator_UserColumnName="PPART" msprop:Generator_ColumnPropNameInRow="PPART" msprop:Generator_ColumnVarNameInTable="columnPPART" msprop:Generator_ColumnPropNameInTable="PPARTColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PPDCHG" msprop:Generator_UserColumnName="PPDCHG" msprop:Generator_ColumnPropNameInRow="PPDCHG" msprop:Generator_ColumnVarNameInTable="columnPPDCHG" msprop:Generator_ColumnPropNameInTable="PPDCHGColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PSENO" msprop:Generator_UserColumnName="PSENO" msprop:Generator_ColumnPropNameInRow="PSENO" msprop:Generator_ColumnVarNameInTable="columnPSENO" msprop:Generator_ColumnPropNameInTable="PSENOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PBQTY" msprop:Generator_UserColumnName="PBQTY" msprop:Generator_ColumnPropNameInRow="PBQTY" msprop:Generator_ColumnVarNameInTable="columnPBQTY" msprop:Generator_ColumnPropNameInTable="PBQTYColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PEMTRY" msprop:Generator_UserColumnName="PEMTRY" msprop:Generator_ColumnPropNameInRow="PEMTRY" msprop:Generator_ColumnVarNameInTable="columnPEMTRY" msprop:Generator_ColumnPropNameInTable="PEMTRYColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PQRDAT" msprop:Generator_UserColumnName="PQRDAT" msprop:Generator_ColumnPropNameInRow="PQRDAT" msprop:Generator_ColumnVarNameInTable="columnPQRDAT" msprop:Generator_ColumnPropNameInTable="PQRDATColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PITEM" msprop:Generator_UserColumnName="PITEM" msprop:Generator_ColumnPropNameInRow="PITEM" msprop:Generator_ColumnVarNameInTable="columnPITEM" msprop:Generator_ColumnPropNameInTable="PITEMColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PDELDT" msprop:Generator_UserColumnName="PDELDT" msprop:Generator_ColumnPropNameInRow="PDELDT" msprop:Generator_ColumnVarNameInTable="columnPDELDT" msprop:Generator_ColumnPropNameInTable="PDELDTColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PMODEL" msprop:Generator_UserColumnName="PMODEL" msprop:Generator_ColumnPropNameInRow="PMODEL" msprop:Generator_ColumnVarNameInTable="columnPMODEL" msprop:Generator_ColumnPropNameInTable="PMODELColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PDESC1" msprop:Generator_UserColumnName="PDESC1" msprop:Generator_ColumnPropNameInRow="PDESC1" msprop:Generator_ColumnVarNameInTable="columnPDESC1" msprop:Generator_ColumnPropNameInTable="PDESC1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PSTAT" msprop:Generator_UserColumnName="PSTAT" msprop:Generator_ColumnPropNameInRow="PSTAT" msprop:Generator_ColumnVarNameInTable="columnPSTAT" msprop:Generator_ColumnPropNameInTable="PSTATColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PCRDT" msprop:Generator_UserColumnName="PCRDT" msprop:Generator_ColumnPropNameInRow="PCRDT" msprop:Generator_ColumnVarNameInTable="columnPCRDT" msprop:Generator_ColumnPropNameInTable="PCRDTColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PCTMT" msprop:Generator_UserColumnName="PCTMT" msprop:Generator_ColumnPropNameInRow="PCTMT" msprop:Generator_ColumnVarNameInTable="columnPCTMT" msprop:Generator_ColumnPropNameInTable="PCTMTColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LABEL" />
+      <xs:field xpath="mstns:PQRDAT" />
+      <xs:field xpath="mstns:PSTAT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

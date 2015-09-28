@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2D0B67A-6E71-478E-B0CE-88F54CAD2F61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DeliverySystem.My.MyApplication</StartupObject>
+    <RootNamespace>DeliverySystem</RootNamespace>
+    <AssemblyName>DeliverySystem</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>ObjetdockSZ.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DeliverySystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DeliverySystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspper.Barcode.ASPNET, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c663117379bae55, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\suchawadee.a\Desktop\Aspper.NET.Barcode.SDK.Eva\Dll\Aspper.Barcode.ASPNET.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\Debug\RPT\rptPalletLabel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPalletLabel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmReprintAndCancelInvoice.Designer.vb">
+      <DependentUpon>FrmReprintAndCancelInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmReprintAndCancelInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmRptDeliveryNo.Designer.vb">
+      <DependentUpon>FrmRptDeliveryNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmRptDeliveryNo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmRptInvoice.Designer.vb">
+      <DependentUpon>FrmRptInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmRptInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmSummaryRpt.Designer.vb">
+      <DependentUpon>FrmSummaryRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmSummaryRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMCustomer.Designer.vb">
+      <DependentUpon>frmMCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMLotno.Designer.vb">
+      <DependentUpon>frmMLotno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMLotno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmEmptyAAT.Designer.vb">
+      <DependentUpon>frmEmptyAAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmEmptyAAT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmFGFile.Designer.vb">
+      <DependentUpon>frmFGFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmFGFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmPrev.Designer.vb" />
+    <Compile Include="Pallet label\frmPrev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmPrintPalletAAT.Designer.vb">
+      <DependentUpon>frmPrintPalletAAT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmPrintPalletAAT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmVerifyData.Designer.vb">
+      <DependentUpon>frmVerifyData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmVerifyData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmCancelDeli.Designer.vb">
+      <DependentUpon>FrmCancelDeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmCancelDeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmPrintDeliNote.Designer.vb">
+      <DependentUpon>FrmPrintDeliNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrmPrintDeliNote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrnGenInvoice.Designer.vb">
+      <DependentUpon>FrnGenInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delivery_Invoice\FrnGenInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.vb">
+      <DependentUpon>frmSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMPrice.Designer.vb">
+      <DependentUpon>frmMPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMProduct.Designer.vb">
+      <DependentUpon>frmMProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExcel\frmMStandardPack.Designer.vb">
+      <DependentUpon>frmMStandardPack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcel\frmMStandardPack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pallet label\frmCancelPallet.Designer.vb">
+      <DependentUpon>frmCancelPallet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmCancelPallet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmEmpty.Designer.vb">
+      <DependentUpon>frmEmpty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmEmpty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pallet label\frmPrintPalletHON.Designer.vb">
+      <DependentUpon>frmPrintPalletHON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet label\frmPrintPalletHON.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Copy %282%29 of rptPalLabel.vb">
+      <DependentUpon>Copy %282%29 of rptPalLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\Copy of rptPalLabel.vb">
+      <DependentUpon>Copy of rptPalLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\DataSet1.Designer.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="report\DataPall.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataPall.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="report\rptDeliveryNote.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDeliveryNote.rpt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="report\rptInvoice.vb">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvoice.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="report\rptPalLabel.vb">
+      <DependentUpon>rptPalLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="report\DataSet2.vb">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Summary Report\frmSummReport.Designer.vb">
+      <DependentUpon>frmSummReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Summary Report\frmSummReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\Configuration.vb" />
+    <Compile Include="Utility\main.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\RPT\rptPalletLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabel.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmCancelDeli.resx">
+      <DependentUpon>FrmCancelDeli.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmPrintDeliNote.resx">
+      <DependentUpon>FrmPrintDeliNote.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmReprintAndCancelInvoice.resx">
+      <DependentUpon>FrmReprintAndCancelInvoice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmRptDeliveryNo.resx">
+      <DependentUpon>FrmRptDeliveryNo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmRptInvoice.resx">
+      <DependentUpon>FrmRptInvoice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrmSummaryRpt.resx">
+      <DependentUpon>FrmSummaryRpt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delivery_Invoice\FrnGenInvoice.resx">
+      <DependentUpon>FrnGenInvoice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMCustomer.resx">
+      <DependentUpon>frmMCustomer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMLotno.resx">
+      <DependentUpon>frmMLotno.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMPrice.resx">
+      <DependentUpon>frmMPrice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMProduct.resx">
+      <DependentUpon>frmMProduct.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExcel\frmMStandardPack.resx">
+      <DependentUpon>frmMStandardPack.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmEmptyAAT.resx">
+      <DependentUpon>frmEmptyAAT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmFGFile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFGFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmPrev.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmPrintPalletAAT.resx">
+      <DependentUpon>frmPrintPalletAAT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmCancelPallet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCancelPallet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmEmpty.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmPrintPalletHON.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrintPalletHON.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet label\frmVerifyData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVerifyData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Copy %282%29 of rptPalLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy %282%29 of rptPalLabel.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Copy of rptPalLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of rptPalLabel.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\rptDeliveryNote.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDeliveryNote.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\rptInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvoice.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\rptPalLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalLabel.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary Report\frmSummReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSummReport.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\DeliverySystem.exe.config" />
+    <None Include="bin\Debug\DeliverySystem.vshost.exe.config" />
+    <None Include="bin\Debug\PLANT.ini" />
+    <None Include="DeliverySystem.vbproj.bak" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="report\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="report\DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="report\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="report\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="report\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="report\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="report\DataSet2.xsx">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Aspper.Barcode.ASPNET.dll" />
+    <Content Include="bin\Debug\DeliverySystem.exe" />
+    <Content Include="bin\Debug\DeliverySystem.pdb" />
+    <Content Include="bin\Debug\DeliverySystem.vshost.exe" />
+    <Content Include="bin\Debug\DeliverySystem.xml" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Image\home_48.png" />
+    <Content Include="Image\ObjetdockSZ.ico" />
+    <None Include="Image\paper_48.png" />
+    <None Include="report\DataPall.xsc">
+      <DependentUpon>DataPall.xsd</DependentUpon>
+    </None>
+    <None Include="report\DataPall.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataPall.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="report\DataPall.xss">
+      <DependentUpon>DataPall.xsd</DependentUpon>
+    </None>
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+    <Content Include="ObjetdockSZ.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
